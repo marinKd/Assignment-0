@@ -1,15 +1,15 @@
 class MySolution {
-  countDownSum(num, counter=0){
+  countDownSum(num){
     // Insert code here;
-    var self=this;
-    if(num>1){
-      counter+=num;
-      self.countDownSum(num-1, counter);
-
+    if(num<=1){
+      return num;
     }
-      return counter;
+    else{
+      return num+this.countDownSum(num-1);
+    }
   }
 }
+let run = new MySolution();
 
 
 // Do not edit this line;
